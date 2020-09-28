@@ -48,7 +48,7 @@ class VigenereCipheringMachine {
       
         resultNum[i] = arrNum1[i] + arrNum2[j] - 26
         j++
-      } else if(arrNum1[i] + arrNum2[j] < 25 && typeof arrNum1[i] !== 'string'){
+      } else if(arrNum1[i] + arrNum2[j] <= 25 && typeof arrNum1[i] !== 'string'){
         
         resultNum[i] = arrNum1[i] + arrNum2[j]
         j++
@@ -122,7 +122,7 @@ class VigenereCipheringMachine {
         if((arrNum1[i] - arrNum2[j] < 0 || arrNum1[i] - arrNum2[j] > 25) && typeof arrNum1[i] !== 'string') {
           resultNum[i] = arrNum1[i] + 26 - arrNum2[j] 
           j++
-        } else if((arrNum1[i] - arrNum2[j] < 25  && arrNum1[i] + arrNum2[j] >= 0) && typeof arrNum1[i] !== 'string'){
+        } else if((arrNum1[i] - arrNum2[j] <= 25  && arrNum1[i] + arrNum2[j] >= 0) && typeof arrNum1[i] !== 'string'){
           resultNum[i] = arrNum1[i] - arrNum2[j]
           j++
         } else {
